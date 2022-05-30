@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "$PYFILE" -m  py_compile "$PYFILEc"
