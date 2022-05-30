@@ -2,8 +2,6 @@
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
 str = str[39:67] + str[107:112] + str[0:6]
-<<<<<<< HEAD
 print(str)
-=======
 print(str)
->>>>>>> 574043171cb8c2b94c440082fbdb9f2bd3e46113
+
