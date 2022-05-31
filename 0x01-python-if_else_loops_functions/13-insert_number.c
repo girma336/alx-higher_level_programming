@@ -66,10 +66,11 @@ listint_t *insert_node(listint_t **head, int number)
 	  prv->next = new;
 	  return (prv);
 	}
-      else if (prv->n == number)
+      while(prv->n == number)
 	{
-	  prv->next = new;
-	  new->next = prv->next->next;
+	  new->next = prv->next;
+	  prv = new;
+	  return (prv);
 	}
       prv = prv->next;
     }
