@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+def islower(c):
+    return chr(97) >= c <= chr(122)
+islower(c)
