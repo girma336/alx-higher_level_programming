@@ -72,13 +72,13 @@ listint_t *insert_node(listint_t **head, int number)
 	  prv->next = new;
 	  return (prv);
 	}
-      while(prv->n == number)
+      if (prv->next == NULL)
 	{
-	  new->next = prv->next;
-	  prv = new;
+	  prv->next = new;
 	  return (prv);
 	}
       prv = prv->next;
+      
     }
   return (*head);
 }
