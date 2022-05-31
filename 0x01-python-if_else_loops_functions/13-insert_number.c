@@ -1,7 +1,35 @@
 #include "lists.h"
 #include <stdlib.h>
-
-
+/**listint_t *insert_big(listint_t **head, int number)
+{
+  listint_t *new, *cur;
+  cur = *head;
+  new = malloc(sizeof(listint_t));
+  new->n = number;
+  new->next = cur;
+  cur = new;
+  return (cur);
+}
+  
+listint_t *insert_end(listint_t **head, int number)
+{
+  listint_t *new, *cur;
+  new = malloc(sizeof(listint_t));
+  new->n == number;
+  new->next = NULL;
+  if (*head == NULL)
+    {
+      *head = new;
+      return (head);
+    }
+  while (cur->next != NULL)
+    {
+      cur = cur->next;
+    }
+  cur->next = new;
+  return (*head);
+}
+**/
 listint_t *insert_node(listint_t **head, int number)
 {
   listint_t *new, *prv;
@@ -13,7 +41,7 @@ listint_t *insert_node(listint_t **head, int number)
   new->n = number;
   new->next = NULL;
 
-  if (head == NULL || *head == NULL)
+  if (*head == NULL)
     {
       (*head) = new;
       return (*head);
@@ -21,24 +49,24 @@ listint_t *insert_node(listint_t **head, int number)
    
   while(prv)
     {
-      if (prv->n > number)
+      if (prv->n >= number)
 	{
 	  new->next = prv;
 	  prv = new;
 	  return (prv);
 	}
-      if (prv->n < number && prv->next->n > number)
+      else if (prv->n < number && prv->next->n > number)
 	{
 	  new->next = prv->next;
 	  prv->next = new;
 	  return (prv);
 	}
-      if (prv->next == NULL)
+      else if (prv->next == NULL)
 	{
 	  prv->next = new;
 	  return (prv);
 	}
-      if (prv->n == number)
+      else if (prv->n == number)
 	{
 	  prv->next = new;
 	  new->next = prv->next->next;
