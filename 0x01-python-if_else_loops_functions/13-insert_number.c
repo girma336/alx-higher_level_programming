@@ -52,7 +52,7 @@ listint_t *insert_node(listint_t **head, int number)
       *head = new;
       return (*head);
     }
-  if (prv->next == NULL)
+  if (prv->next == NULL && prv->n <= number)
     {
       prv->next = new;
       return (prv);
