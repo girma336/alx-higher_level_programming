@@ -1,35 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
-/**listint_t *insert_big(listint_t **head, int number)
-{
-  listint_t *new, *cur;
-  cur = *head;
-  new = malloc(sizeof(listint_t));
-  new->n = number;
-  new->next = cur;
-  cur = new;
-  return (cur);
-}
-  
-listint_t *insert_end(listint_t **head, int number)
-{
-  listint_t *new, *cur;
-  new = malloc(sizeof(listint_t));
-  new->n == number;
-  new->next = NULL;
-  if (*head == NULL)
-    {
-      *head = new;
-      return (head);
-    }
-  while (cur->next != NULL)
-    {
-      cur = cur->next;
-    }
-  cur->next = new;
-  return (*head);
-}
-**/
+
 listint_t *insert_node(listint_t **head, int number)
 {
   listint_t *new, *prv;
@@ -52,11 +23,7 @@ listint_t *insert_node(listint_t **head, int number)
       *head = new;
       return (*head);
     }
-  if (prv->next == NULL && prv->n <= number)
-    {
-      prv->next = new;
-      return (prv);
-    }
+
   while(prv)
     {
       if (prv->n >= number)
@@ -77,7 +44,11 @@ listint_t *insert_node(listint_t **head, int number)
 	  return (prv);
 	}
       prv = prv->next;
-      
+   if (prv->next == NULL && prv->n <= number)
+    {
+      prv->next = new;
+      return (prv);
+    }
     }
   return (*head);
 }
