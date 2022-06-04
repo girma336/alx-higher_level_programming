@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for i in matrix:
-        for val in i:
-            if val != 3 and val != 6 and val != 9:
-                print("{:d}".format(val), end=" ")
-            else:
-                print("{:d}".format(val), end="")
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if j != 0:
+                print(" ", end="")
+            print("{:d}".format(matrix[i][j]), end="")
         print()
