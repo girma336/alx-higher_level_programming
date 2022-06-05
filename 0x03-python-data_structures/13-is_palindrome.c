@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 void reverse(listint_t **head);
-int compareList(listint_t **head, listint_t **new);
+int compareList(listint_t *head, listint_t *new);
 void reverse(listint_t **head)
 {
   listint_t *prev = NULL;
@@ -17,11 +17,11 @@ void reverse(listint_t **head)
   *head = prev;
 }
 
-int compareList(listint_t **head, listint_t **new)
+int compareList(listint_t *head, listint_t *new)
 {
-  listint_t *temp1 = *head;
-  listint_t *temp2 = *new;
-  while (temp1 && temp2)
+  listint_t *temp1 = head;
+  listint_t *temp2 = new;
+  while (temp1 != NULL && temp2 != NULL)
     {
       if (temp1->n == temp2->n)
 	{
@@ -39,8 +39,8 @@ int compareList(listint_t **head, listint_t **new)
 
 int is_palindrome(listint_t **head)
 {
-  int res;
-  listint_t *slow = *head, *prv_slow, *sec_half;
+  int res = 1;
+  listint_t *slow = *head, *prv_slow = *head, *sec_half;
   listint_t *fast = *head, *mid = NULL;
 
   if (*head != NULL && (*head)->next != NULL)
@@ -60,9 +60,9 @@ int is_palindrome(listint_t **head)
 
       prv_slow->next = NULL;
       reverse(&sec_half);
-      res = compareList(head, &sec_half);
+      res = compareList(*head, sec_half);
 
-      reverse(&sec_half);
+      /*reverse(&sec_half);*/
 
       if (mid != NULL)
 	{
