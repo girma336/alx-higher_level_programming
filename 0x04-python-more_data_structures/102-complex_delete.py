@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def complex_delete(a_dictionary, value):
-    if a_dictionary == {}:
+    if a_dictionary == {} or a_directory is None:
         return None
     del_key = []
     for k, v in a_dictionary.items():
