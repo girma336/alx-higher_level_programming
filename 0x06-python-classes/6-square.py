@@ -17,8 +17,8 @@ class Square:
         size : integer else TypeError
         if size less than 0, raise value error
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -38,9 +38,7 @@ class Square:
         to set private instance attribute
         """
         self.__size = value
-        try:
-            assert type(value) == int
-        except BaseException:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -49,15 +47,11 @@ class Square:
     def position(self, value):
         """to set position, a tuple of two integers"""
         self.__position = value
-        try:
-            assert type(value) == tuple
-        except BaseException:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        try:
-            assert type(value[0]) == int or type(value[1]) == int
-        except BaseException:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
+
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
