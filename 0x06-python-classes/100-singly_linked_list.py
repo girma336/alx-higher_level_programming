@@ -46,13 +46,13 @@ class SinglyLinkedList:
 
     def __str__(self):
         """ make list printable"""
-        all_data = ""
+        all_data = []
         tmp = self.__head
         while (tmp):
-            all_data += str(tmp.data) + "\n"
+            all_data.append(str(tmp.data))
             tmp = tmp.next_node
         # return all data except the new line at the end
-        return all_data[:-1]
+        return ('\n'.join(all_data))
 
     def sorted_insert(self, value):
         """ insert into correct sorted position"""
