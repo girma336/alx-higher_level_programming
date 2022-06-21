@@ -42,12 +42,12 @@ class SinglyLinkedList:
 
     def __init__(self):
         """ initialization"""
-        self.head = None
+        self.__head = None
 
     def __str__(self):
         """ make list printable"""
         all_data = ""
-        tmp = self.head
+        tmp = self.__head
         while (tmp):
             all_data += str(tmp.data) + "\n"
             tmp = tmp.next_node
@@ -57,13 +57,13 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """ insert into correct sorted position"""
         NewNode = Node(value)
-        temp = self.head
+        temp = self.__head
         if temp is None:
-            self.head = NewNode
+            self.__head = NewNode
             return
         if value <= temp.data:
-            NewNode.next_node = self.head
-            self.head = NewNode
+            NewNode.next_node = self.__head
+            self.__head = NewNode
             return
 
         while (temp.next_node and temp.next_node.data <= value):
