@@ -30,7 +30,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 #unbalanced rows
->>> func(z, 2)
+>>> matrix_check(z, 2)
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
