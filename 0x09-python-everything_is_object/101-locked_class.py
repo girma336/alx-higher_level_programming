@@ -5,5 +5,4 @@
 class LockedClass:
     """defined the class with the given clas"""
 
-
     __slots__ = ["first_name"]
