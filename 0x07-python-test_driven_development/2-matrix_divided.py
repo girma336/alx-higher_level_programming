@@ -20,6 +20,4 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) "
                         "of integers/floats")
 
-    new_matrix = [[eval("{:.2f}".format(num / div)) for num in row]
-                  for row in matrix]
-    return new_matrix
+    return [[round(item / div, 2) for item in row] for row in matrix]
