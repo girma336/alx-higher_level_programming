@@ -9,6 +9,8 @@ def matrix_divided(matrix, div):
         or floats div (int/float): The divisor.
     """
 
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 10
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     if div == 0:
