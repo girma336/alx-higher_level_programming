@@ -66,3 +66,9 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+
+#missing two arguments
+>>> func(fn2, ln2)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
