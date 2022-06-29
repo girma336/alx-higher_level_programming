@@ -28,6 +28,12 @@ Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+#missing tow argument
+>>> matrix_check(z, "")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
 #dividby zero Error
 >>> matrix_check(x, 0)
 Traceback (most recent call last):
