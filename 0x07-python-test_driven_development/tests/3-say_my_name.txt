@@ -72,5 +72,5 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
->>> func("girma")
-My name is girma 
+>>> func("girma", "tarekegn")
+My name is girma tarekegn
