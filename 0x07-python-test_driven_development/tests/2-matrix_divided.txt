@@ -28,6 +28,11 @@ Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+#dividby zero Error
+>>> matrix_check(x, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
 
 #unbalanced rows
 >>> matrix_check(z, 2)
