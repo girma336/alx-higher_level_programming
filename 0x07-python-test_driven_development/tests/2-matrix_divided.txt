@@ -51,7 +51,6 @@ Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
->>> matrix_check(y, 0)
-Traceback (most recent call last):
-...
-ZeroDivisionError: division by zero
+>>> matrix_check(x, 2.2)
+[[0.0, 0.91], [0.45, 0.91], [1.82, 1.82], [3.18, 3.64], [-24.55, 1.45]]
+
