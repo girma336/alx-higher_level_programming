@@ -45,3 +45,8 @@ ZeroDivisionError: division by zero
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
+
+>>> matrix_check()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
