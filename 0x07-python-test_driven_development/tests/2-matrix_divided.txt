@@ -54,3 +54,7 @@ TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' an
 >>> matrix_check(x, 2.2)
 [[0.0, 0.91], [0.45, 0.91], [1.82, 1.82], [3.18, 3.64], [-24.55, 1.45]]
 
+>>> matrix_check(x)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
