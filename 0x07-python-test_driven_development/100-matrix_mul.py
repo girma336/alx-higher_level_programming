@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+#Author Girma Tarekegn
 
 def matrix_mul(m_a, m_b):
     """Multiplies two matricies
