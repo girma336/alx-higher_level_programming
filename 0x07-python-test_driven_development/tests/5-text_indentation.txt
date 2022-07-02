@@ -21,20 +21,20 @@ Lorem Ipsum.
 >>> func(4)
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func(12.3)
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func([])
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func({})
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func(1j)
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
