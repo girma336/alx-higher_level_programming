@@ -62,4 +62,4 @@ def matrix_mul(m_a, m_b):
                 sum_t += m_a[row_i][col_i] * m_b[col_i][col_b]
             product[row_i][col_b] = sum_t
             col_b += 1
-    return 
+    return product 
