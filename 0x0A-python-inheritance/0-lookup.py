@@ -3,5 +3,9 @@
 
 
 def lookup(obj):
-    my_list = dir(obj)
-    return my_list
+    """
+    return the dictionery of the class
+    and the given integer
+    """
+
+    return dir(obj)
