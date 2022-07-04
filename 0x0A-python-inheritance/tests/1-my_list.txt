@@ -1,13 +1,19 @@
+The 1-my_list module
+====================
 
+Using ``print_sorted``
+----------------------
 >>> import sys
 >>> sys.path.insert(1, '../')
 >>> lib = __import__("1-my_list")
 >>> my_list = lib.MyList
 
+Testing that MyList Inheritance:
 true value
 >>> a = [1, 4, 2, 3, 5]
 >>> b = []
 
+Testing for list already in correct order:
 >>> my_list(a)
 [1, 4, 2, 3, 5]
 
@@ -24,12 +30,18 @@ true value
 >>> issubclass(my_list, list)
 True
 
-
+Testing for reversed order list:
 >>> l = my_list()
 
 >>> l.append(1)
 >>> l.append(4)
 >>> l.append(8)
+>>> l.append(6)
+>>> l.append(3)
+>>> l.append(2)
 
 >>> print(l)
-[1, 4, 8]
+[1, 4, 8, 6, 3, 2]
+
+>>> my_list.print_sorted(l)
+[1, 2, 3, 4, 6, 8]
