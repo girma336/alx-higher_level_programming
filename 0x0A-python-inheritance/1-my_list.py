@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-"""Class and inheritance"""
+"""Class and inheritancpass"""
 
 
-class List:
-    """pass"""
-    pass
-
-
-class MyList(List):
+class MyList(list):
     """ Inherted class"""
 
     def print_sorted(self):
         """function publice"""
-
         print(sorted(self))
