@@ -1,0 +1,35 @@
+
+>>> import sys
+>>> sys.path.insert(1, '../')
+>>> lib = __import__("1-my_list")
+>>> my_list = lib.MyList
+
+true value
+>>> a = [1, 4, 2, 3, 5]
+>>> b = []
+
+>>> my_list(a)
+[1, 4, 2, 3, 5]
+
+>>> my_list()
+[]
+
+>>> my_list.print_sorted(a)
+[1, 2, 3, 4, 5]
+
+>>> my_list(b)
+[]
+
+
+>>> issubclass(my_list, list)
+True
+
+
+>>> l = my_list()
+
+>>> l.append(1)
+>>> l.append(4)
+>>> l.append(8)
+
+>>> print(l)
+[1, 4, 8]
