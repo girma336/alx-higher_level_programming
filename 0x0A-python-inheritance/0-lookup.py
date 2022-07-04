@@ -3,6 +3,5 @@
 
 
 def lookup(obj):
-    my_list = []
     my_list = dir(obj)
     return my_list
