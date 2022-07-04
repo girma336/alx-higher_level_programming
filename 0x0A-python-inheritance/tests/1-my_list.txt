@@ -13,6 +13,7 @@ true value
 >>> a = [1, 4, 2, 3, 5]
 >>> b = []
 
+
 Testing for list already in correct order:
 >>> my_list(a)
 [1, 4, 2, 3, 5]
@@ -45,3 +46,15 @@ Testing for reversed order list:
 
 >>> my_list.print_sorted(l)
 [1, 2, 3, 4, 6, 8]
+
+string sort
+>>> my_list([True, False, True, False])
+[True, False, True, False]
+>>> my_list.print_sorted([True, False, True, False])
+[False, False, True, True]
+
+>>> my_list(['1', '2', '6', '7'])
+['1', '2', '6', '7']
+
+>>> my_list.print_sorted(['1', '2', '6', '7'])
+['1', '2', '6', '7']
