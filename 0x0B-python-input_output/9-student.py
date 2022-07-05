@@ -2,7 +2,6 @@
 """Write a class Student That defines a student by"""
 
 
-
 class Student:
     """name of the class was Strudent"""
 
