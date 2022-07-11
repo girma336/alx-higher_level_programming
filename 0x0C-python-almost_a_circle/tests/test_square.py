@@ -15,7 +15,7 @@ class TestSquare_instantation(unittest.TestCase):
         self.assertIsInstance(Square(10), Base)
 
     def test_is_rectangle(self):
-        self.assertIsInstance(Square(10), Rectangle)
+        self.assertIsInstance(Square(10), Square)
 
     def test_no_argument(self):
         with self.assertRaises(TypeError):
@@ -46,7 +46,7 @@ class TestSquare_instantation(unittest.TestCase):
 
     def test_private_size(self):
         with self.assertRaises(AttributeError):
-            print(Square(10, 2, 3, 4)__size)
+            print(Square(10, 2, 3, 4).__size)
 
     def test_getter_size(self):
         self.assertEqual(5, Square(5).size)
