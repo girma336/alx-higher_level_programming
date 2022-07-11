@@ -33,33 +33,34 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
 
         if args and len(args) != 0:
-            for val in range(len(args)):
-                if val == 0:
-                    if args[val] is None:
-                        self.__init__(self.size, self.x,
-                                      self.y)
-                    else:
-                        self.id = args[val]
-                elif val == 1:
-                    self.size = args[val]
-                elif val == 2:
-                    self.x = args[val]
-                elif val == 3:
-                    self.y = args[val]
-
-        elif kwargs and len(kwargs) != 0:
-            for key, value in kwargs.items():
-                if key == "id":
-                    if value is None:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = value
-                elif key == "size":
-                    self.size = value
-                elif key == "x":
-                    self.x = value
-                elif key == "y":
-                    self.y = value
+                        self.id = arg
+                elif a == 1:
+                    self.size = arg
+                elif a == 2:
+                    self.x = arg
+                elif a == 3:
+                    self.y = arg
+                a += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "size":
+                    self.size = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
 
     def to_dictionary(self):
         """return update the dec"""
