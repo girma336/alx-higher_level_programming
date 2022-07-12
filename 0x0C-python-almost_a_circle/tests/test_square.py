@@ -6,6 +6,7 @@ import io
 import unittest
 from models.base import Base
 from models.square import Square
+from models.rectangle import Rectangle
 
 
 class TestSquare_instantation(unittest.TestCase):
@@ -15,7 +16,7 @@ class TestSquare_instantation(unittest.TestCase):
         self.assertIsInstance(Square(10), Base)
 
     def test_is_rectangle(self):
-        self.assertIsInstance(Square(10), Square)
+        self.assertIsInstance(Square(10), Rectangle)
 
     def test_no_argument(self):
         with self.assertRaises(TypeError):
