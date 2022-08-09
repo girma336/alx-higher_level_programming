@@ -1,2 +1,2 @@
--- Write a script that lists all records of the table second_table
-SELECT score, name FROM second_tabel ORDER BY score DESC;
+-- List all records of the table and order by score (top first)
+SELECT score, name FROM second_table ORDER BY score DESC;
