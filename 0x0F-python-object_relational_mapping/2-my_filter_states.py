@@ -9,8 +9,9 @@ if __name__ == "__main__":
                          user=argv[1], db=argv[3],
                          passwd=argv[2])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
+    cur.execute("SELECT * FROM states")
     for data in cur.fetchall():
-        print(data)
+        if data[1] == argv[4]:
+            print(data)
     cur.close()
     db.close()
